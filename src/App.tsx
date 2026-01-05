@@ -1,7 +1,18 @@
+import { useState } from "react";
 import "./App.css";
 import logo from "./assets/rejuvia-labs-logo.png";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="app">
       {/* Top Banner */}
@@ -20,6 +31,15 @@ function App() {
             <div className="logo-container">
               <img src={logo} alt="Rejuvia Labs" className="logo" />
             </div>
+            <button
+              className="hamburger-button"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+              <span className="hamburger-line"></span>
+            </button>
             <nav className="main-nav">
               <ul>
                 <li>
@@ -56,6 +76,66 @@ function App() {
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={closeMenu}>
+          <nav className="mobile-menu" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="mobile-menu-close"
+              onClick={closeMenu}
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+            <ul className="mobile-menu-list">
+              <li>
+                <a href="#category" onClick={closeMenu}>
+                  Category
+                </a>
+              </li>
+              <li>
+                <a href="#type" onClick={closeMenu}>
+                  Type
+                </a>
+              </li>
+              <li>
+                <a href="#form" onClick={closeMenu}>
+                  Form
+                </a>
+              </li>
+              <li>
+                <a href="#feature" onClick={closeMenu}>
+                  Feature
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={closeMenu}>
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#why-us" onClick={closeMenu}>
+                  Why Us
+                </a>
+              </li>
+              <li className="mobile-menu-actions">
+                <a href="#cart" onClick={closeMenu}>
+                  🛒 Cart 0
+                </a>
+              </li>
+              <li className="mobile-menu-actions">
+                <a href="#login" onClick={closeMenu}>
+                  Log In / Sign Up
+                </a>
+              </li>
+              <li className="mobile-menu-actions">
+                <span className="search-icon">🔍</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      )}
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
