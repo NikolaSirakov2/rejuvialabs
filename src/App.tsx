@@ -1,4 +1,5 @@
 import "./App.css";
+import logo from "./assets/rejuvia-labs-logo.png";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <div className="header-container">
           <div className="header-main">
             <div className="logo-container">
-              <h1 className="logo">Rejuvia Labs</h1>
+              <img src={logo} alt="Rejuvia Labs" className="logo" />
             </div>
             <nav className="main-nav">
               <ul>
