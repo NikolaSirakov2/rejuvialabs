@@ -4,57 +4,17 @@ function App() {
   return (
     <div className="app">
       {/* Top Banner */}
-      <div className="top-banner">
+      {/* <div className="top-banner">
         <div className="banner-content">
           <span>
             20% Off Sitewide Holiday Sale - Use code <strong>HOLIDAY20</strong>
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* Header */}
       <header className="header">
         <div className="header-container">
-          <div className="header-top">
-            <div className="search-container">
-              <span className="search-icon">🔍</span>
-              <input
-                type="text"
-                placeholder="Search"
-                className="search-input"
-              />
-            </div>
-            <nav className="header-nav">
-              <ul className="nav-list">
-                <li>
-                  <a href="#category">Category</a>
-                </li>
-                <li>
-                  <a href="#type">Type</a>
-                </li>
-                <li>
-                  <a href="#form">Form</a>
-                </li>
-                <li>
-                  <a href="#feature">Feature</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-                <li>
-                  <a href="#why-us">Why Us</a>
-                </li>
-              </ul>
-              <ul className="header-actions">
-                <li>
-                  <a href="#cart">🛒 Cart 0</a>
-                </li>
-                <li>
-                  <a href="#login">Log In / Sign Up</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
           <div className="header-main">
             <div className="logo-container">
               <h1 className="logo">Rejuvia Labs</h1>
@@ -79,25 +39,22 @@ function App() {
                 <li>
                   <a href="#why-us">Why Us</a>
                 </li>
+                <ul className="header-actions">
+                  <li>
+                    <a href="#cart">🛒 Cart 0</a>
+                  </li>
+                  <li>
+                    <a href="#login">Log In / Sign Up</a>
+                  </li>
+                  <li>
+                    <span className="search-icon">🔍</span>
+                  </li>
+                </ul>
               </ul>
             </nav>
           </div>
         </div>
       </header>
-
-      {/* Info Bar */}
-      <div className="info-bar">
-        <div className="info-item">
-          <strong>FREE Shipping</strong> on international orders over $400.
-        </div>
-        <div className="info-item">
-          <strong>USA-Domestic Delivery</strong> and same-day shipping.
-        </div>
-        <div className="info-item">
-          <strong>Independent Testing</strong> to meet quality standards.
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
